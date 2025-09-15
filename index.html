@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Med+ | Sua saúde na palma da mão</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Med<span class="plus">+</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#especialidades">Especialidades</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#" id="logoutBtn" style="display:none;">Sair</a></li>
+        </ul>
+    </nav>
+
+    <main id="app-container">
+        <div id="landing-page">
+            <header class="hero-section" id="home">
+                <div class="hero-content">
+                    <h1>Med+ | Sua saúde na palma da mão, onde quer que você esteja.</h1>
+                    <p>Conecte-se com médicos especialistas por teleconsulta de forma segura e prática.</p>
+                    <a href="#agendamento" class="cta-button">Agende sua Consulta</a>
+                </div>
+            </header>
+
+            <section class="benefits">
+                <div class="benefit-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Atendimento Rápido</h3>
+                    <p>Agende uma consulta em poucos cliques, sem sair de casa.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Acesso a Especialistas</h3>
+                    <p>Encontre o médico ideal para suas necessidades, em qualquer lugar do país.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-prescription-bottle-alt"></i>
+                    <h3>Renovação de Receitas</h3>
+                    <p>Peça a renovação de suas receitas de forma simples e segura.</p>
+                </div>
+            </section>
+
+            <section class="login-section" id="login">
+                <h2>Acessar Minha Conta</h2>
+                <form class="login-form">
+                    <input type="text" id="username" placeholder="E-mail ou Nome de Usuário" required>
+                    <div class="password-container">
+                        <input type="password" id="password" placeholder="Senha" required>
+                        <i class="far fa-eye" id="togglePassword"></i>
+                    </div>
+                    <button type="submit">Entrar</button>
+                    <div class="form-links">
+                        <a href="#">Esqueceu a senha?</a>
+                        <a href="#">Criar uma nova conta</a>
+                    </div>
+                </form>
+            </section>
+
+            <section class="specialties-section" id="especialidades">
+                <h2>Escolha a sua especialidade</h2>
+                <div class="specialty-grid">
+                    <div class="specialty-card" data-specialty="Cardiologista">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Cardiologista</span>
+                    </div>
+                    <div class="specialty-card" data-specialty="Clínico Geral">
+                        <i class="fas fa-user-nurse"></i>
+                        <span>Clínico Geral</span>
+                    </div>
+                    <div class="specialty-card" data-specialty="Ginecologista">
+                        <i class="fas fa-venus"></i>
+                        <span>Ginecologista</span>
+                    </div>
+                    <div class="specialty-card" data-specialty="Oftalmologista">
+                        <i class="fas fa-eye"></i>
+                        <span>Oftalmologista</span>
+                    </div>
+                    <div class="specialty-card" data-specialty="Alergologista">
+                        <i class="fas fa-allergies"></i>
+                        <span>Alergologista</span>
+                    </div>
+                    <div class="specialty-card" data-specialty="Medicina Preventiva">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Medicina Preventiva</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="services-section" id="servicos">
+                <h2>Outros Serviços</h2>
+                <div class="service-container">
+                    <div class="service-box">
+                        <h3>Renovação de Receita Médica</h3>
+                        <p>Solicite a renovação de sua receita de forma ágil, sem precisar de uma nova consulta.</p>
+                        <select>
+                            <option>Selecione o medicamento...</option>
+                            <option>Remédio para Pressão</option>
+                            <option>Remédio para asmático</option>
+                            <option>Antibióticos</option>
+                            <option>Outros</option>
+                        </select>
+                        <button>Solicitar Renovação</button>
+                    </div>
+                    <div class="service-box">
+                        <h3>Atendimento Rápido</h3>
+                        <p>Para urgências leves, um clínico geral estará disponível para atendê-lo.</p>
+                        <button class="rapid-button">Atendimento Rápido</button>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="contact-section" id="contato">
+                <h2>Entre em Contato</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Nome" required>
+                    <input type="email" placeholder="E-mail" required>
+                    <textarea placeholder="Mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </div>
+
+        <div id="user-dashboard" class="hidden">
+            <header class="dashboard-header">
+                <h2>Bem-vindo(a) à sua área, <span id="dashboard-username">Usuário</span>!</h2>
+            </header>
+            <section class="dashboard-options">
+                <a href="#" class="dashboard-card" id="agendamentos-online-btn">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Agendamentos Online</span>
+                </a>
+                <a href="#" class="dashboard-card" id="canais-atendimento-btn" style="display:none;">
+                    <i class="fas fa-headset"></i>
+                    <span>Canais de Atendimento</span>
+                </a>
+                <a href="#especialidades-dashboard" class="dashboard-card" id="especialistas-btn">
+                    <i class="fas fa-user-md"></i>
+                    <span>Escolha de Especialistas</span>
+                </a>
+            </section>
+            
+            <section class="specialties-section" id="especialidades-dashboard">
+                <h2>Escolha a sua especialidade</h2>
+                <div class="specialty-grid">
+                    <div class="specialty-card" data-specialty="Cardiologista">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Cardiologista</span>
+                    </div>
+                    <div class="specialty-card" data-specialty="Clínico Geral">
+                        <i class="fas fa-user-nurse"></i>
+                        <span>Clínico Geral</span>
+                    </div>
+                    <div class="specialty-card" data-specialty="Ginecologista">
+                        <i class="fas fa-venus"></i>
+                        <span>Ginecologista</span>
+                    </div>
+                    <div class="specialty-card" data-specialty="Oftalmologista">
+                        <i class="fas fa-eye"></i>
+                        <span>Oftalmologista</span>
+                    </div>
+                    <div class="specialty-card" data-specialty="Alergologista">
+                        <i class="fas fa-allergies"></i>
+                        <span>Alergologista</span>
+                    </div>
+                    <div class="specialty-card" data-specialty="Medicina Preventiva">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Medicina Preventiva</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="agendamento-page" class="hidden">
+            <h2 id="agendamento-title">Agendar Consulta com <span id="specialty-name"></span></h2>
+            <div class="agendamento-container">
+                <p id="specialty-description"></p>
+                <div class="calendar-section">
+                    <h3>Selecione o dia e horário:</h3>
+                    <div class="calendar-grid">
+                        <div class="calendar-day">Segunda-feira<br><span>16/09</span></div>
+                        <div class="calendar-day">Terça-feira<br><span>17/09</span></div>
+                        <div class="calendar-day">Quarta-feira<br><span>18/09</span></div>
+                    </div>
+                    <div class="time-slots">
+                        <span class="time-slot">09:00</span>
+                        <span class="time-slot">10:30</span>
+                        <span class="time-slot">14:00</span>
+                    </div>
+                    <button id="confirm-agendamento">Confirmar Agendamento</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="rapid-service-page" class="hidden">
+            <div class="video-call-box">
+                <i class="fas fa-video-slash fa-5x"></i>
+                <p>Aguarde sua vez na fila...</p>
+                <div class="status-online">
+                    <i class="fas fa-circle online-dot"></i>
+                    <span>Online</span>
+                </div>
+            </div>
+            <button id="close-rapid-service">Voltar</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 Med+. Todos os direitos reservados.</p>
+        <p>
+            Suporte de TI: 
+            Arthur De Souza Garcia - RA 215692025 | 
+            Luiz Gustavo Paz De Almeida - RA 212302025 | 
+            Sthefany Malheiro Correia Gonçalves - RA 238562023
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
