@@ -1,0 +1,497 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f8ff; /* Azul bem claro */
+    color: #333;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1a4d6b; /* Azul escuro profissional */
+}
+
+.plus {
+    color: #4CAF50; /* Verde vibrante */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #1a4d6b;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(26, 77, 107, 0.8), rgba(26, 77, 107, 0.8)), url('https://via.placeholder.com/1200x600?text=Consulta+Online') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding-top: 60px; /* Para não ficar atrás da navbar */
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+section {
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #1a4d6b;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #4CAF50;
+    margin: 10px auto 0;
+}
+
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    background-color: #e6f7ff;
+}
+
+.benefit-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    width: 30%;
+}
+
+.benefit-item i {
+    font-size: 2.5rem;
+    color: #1a4d6b;
+    margin-bottom: 1rem;
+}
+
+.login-section {
+    background-color: #ffffff;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.login-form input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.password-container {
+    width: 100%;
+    position: relative;
+}
+
+.password-container input {
+    width: calc(100% - 2.5rem);
+}
+
+.password-container i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #aaa;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #1a4d6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #143a51;
+}
+
+.form-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form-links a {
+    color: #1a4d6b;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.specialty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+}
+
+.specialty-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.specialty-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.specialty-card i {
+    font-size: 3rem;
+    color: #1a4d6b;
+    margin-bottom: 1rem;
+}
+
+.services-section {
+    background-color: #e6f7ff;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.service-box {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    width: 40%;
+}
+
+.service-box h3 {
+    color: #1a4d6b;
+}
+
+.service-box select, .service-box button {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+.service-box select {
+    border: 1px solid #ddd;
+}
+
+.service-box button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.service-box button:hover {
+    background-color: #45a049;
+}
+
+.contact-section {
+    background-color: #ffffff;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    padding: 1rem;
+    background-color: #1a4d6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos do Dashboard */
+.dashboard-header {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #1a4d6b;
+    color: white;
+}
+
+.dashboard-options {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.dashboard-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    text-decoration: none;
+    color: #1a4d6b;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.dashboard-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilos da Tela de Agendamento */
+.agendamento-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.agendamento-container p {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.calendar-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.calendar-day {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.calendar-day:hover {
+    background-color: #e6f7ff;
+}
+
+.time-slots {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.time-slot {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.time-slot:hover {
+    background-color: #e6f7ff;
+}
+
+#confirm-agendamento {
+    padding: 1rem 2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos da tela de Atendimento Rápido */
+#rapid-service-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.video-call-box {
+    background: #2c3e50;
+    color: white;
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.status-online {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.online-dot {
+    color: #4CAF50;
+    animation: pulse-online 1.5s infinite;
+}
+
+@keyframes pulse-online {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+#close-rapid-service {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos do Rodapé */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1a4d6b;
+    color: white;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-links {
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+    .benefits {
+        flex-direction: column;
+    }
+    .benefit-item {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-box {
+        width: 80%;
+    }
+    .dashboard-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    .dashboard-card {
+        width: 80%;
+    }
+}
